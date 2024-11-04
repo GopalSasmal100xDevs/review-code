@@ -15,12 +15,17 @@ export default function GithubCorner() {
       method: "GET",
       headers: myHeaders,
     };
-    const res = await fetch(
-      `https://api.github.com/search/users?q=${name}`,
-      requestOptions
-    );
-    const data = await res.json();
-    setUsers(data.items || []);
+    try {
+      const res = await fetch(
+        `https://api.github.com/search/users?q=${name}`,
+        requestOptions
+      );
+
+      const data = await res.json();
+      setUsers(data.items || []);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   function keyEventHandler(e) {

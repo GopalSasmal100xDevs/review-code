@@ -1,10 +1,9 @@
-import "./App.css";
-import GithubCorner from "./components/GithubCorner";
+import NestedComments from "./components/NestedComments";
 
 export default function App() {
   return (
     <div>
-      <GithubCorner />
+      <NestedComments />
     </div>
   );
 }
