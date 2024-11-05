@@ -1,9 +1,11 @@
-import NestedComments from "./components/NestedComments";
+import Counter from "./components/Counter";
+import Users from "./components/Users";
 
 export default function App() {
   return (
     <div>
-      <NestedComments />
+      <Counter />
+      <Users />
     </div>
   );
 }
